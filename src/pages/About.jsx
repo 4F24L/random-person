@@ -1,29 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Nav from "../components/Nav";
 import { useRecoilValue } from "recoil";
 import { userAtom } from "../store/atoms/UserData";
+import loading from "../assets/loading.gif"
 
 const About = () => {
   const user = useRecoilValue(userAtom);
   const date = user?.dob? new Date(user?.dob?.date).toISOString().split('T')[0] : "XX-XX-XXXX";
   const location = user?.location;
 
-  const [image, setImage] = useState("")
-  
-      useEffect(() => {
-        if (user && user?.picture?.large) {
-            setImage(user?.picture?.large);
-        } else {
-            setImage("./src/assets/loading.gif");
-        }
-      }, [user]);
   
   return (
     <div>
       <Nav />
       
       <div className=' flex justify-around items-center bg-slate-500 rounded-lg py-4 font-mono text-white'>
-        <img style={{ height: "200px", borderRadius: "15px", width:"200px" }} src={image} alt="" />
+        <img style={{ height: "200px", borderRadius: "15px", width:"200px" }} src={user != 0 ? user?.picture?.large : loading} alt="" />
         {/* <div className='text-white text-xl'>
         <div className=' text-4xl'>{user != 0? user?.name?.first : "_ _ _"}</div>
         </div> */}
