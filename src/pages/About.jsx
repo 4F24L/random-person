@@ -25,7 +25,7 @@ const About = () => {
       <div className=' flex justify-around items-center bg-slate-500 rounded-lg py-4 font-mono text-white'>
         <img style={{ height: "200px", borderRadius: "15px", width:"200px" }} src={image} alt="" />
         <div className='text-white text-xl'>
-        <div className=' text-4xl'>{user != 0? user?.name?.first : "_ _ _"}</div>
+        {/* <div className=' text-4xl'>{user != 0? user?.name?.first : "_ _ _"}</div> */}
         </div>
       </div>
       
