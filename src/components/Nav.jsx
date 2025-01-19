@@ -9,13 +9,13 @@ const Nav = () => {
     const user = useRecoilValue(userAtom);
     const [navText, setNavText] = useRecoilState(navTextAtom);
   return (
-    <div className=' m-auto  bg-slate-500 rounded-lg py-4 font-mono text-white text-[1.23rem] flex justify-between px-[1rem] mb-1'>
+    <div className=' m-auto  bg-slate-500 rounded-lg py-4 font-mono text-white text-[1.15rem] flex justify-between px-[0.8rem] mb-1'>
 
     <div>
         <div>{navText}</div>
     </div>
     <div>
-        <ul className=' flex gap-[1.2rem]'>
+        <ul className=' flex gap-[1.01rem]'>
             <li className='cursor-pointer' onClick={()=>{
                 setNavText("Hello World!")
                 navigate('/')
