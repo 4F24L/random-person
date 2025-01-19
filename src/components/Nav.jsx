@@ -21,11 +21,11 @@ const Nav = () => {
                 navigate('/')
             }}>Home</li>
             <li className='cursor-pointer' onClick={()=>{
-                setNavText(user?.name?.first || "Hello World !")
+                setNavText(user?.name?.first || "Hello World!")
                 navigate('/about')
             }}>About</li>
             <li className='cursor-pointer' onClick={()=>{
-                setNavText("Hello World !")
+                setNavText("Hello World!")
                 navigate('/contact')
             }}>Contact</li>
         </ul>
