@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from '../components/Nav'
 import InfoCard from '../components/InfoCard'
 
-const Contact = () => {
+const Info = () => {
   return (
     <div>
     <Nav/>
@@ -49,4 +49,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Info;

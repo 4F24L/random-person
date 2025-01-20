@@ -26,8 +26,8 @@ const Nav = () => {
             }}>About</li>
             <li className='cursor-pointer' onClick={()=>{
                 setNavText("Hello World!")
-                navigate('/contact')
-            }}>Contact</li>
+                navigate('/info')
+            }}>Info</li>
         </ul>
     </div>
     </div>
